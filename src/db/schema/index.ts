@@ -146,6 +146,7 @@ export const orders = sqliteTable("orders", {
   status: text("status", { enum: ["PENDING", "PAID"] })
     .default("PENDING")
     .notNull(),
+  duePayment: real("duePayment").default(0).notNull(),
   subscriptionId: integer("subscriptionId")
     .references(() => subscriptions.id, {
       onDelete: "restrict",
