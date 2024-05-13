@@ -116,6 +116,7 @@ export const plans = router({
           .set({
             name,
             price,
+            updatedAt: new Date(),
           })
           .where(eq(schema.plans.id, id));
         return {
