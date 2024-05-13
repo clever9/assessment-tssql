@@ -80,4 +80,5 @@ If you were to introduce two more props to plans:
 How would this affect the current plan upgrade calculation?
 
 ### answer here:
+#### The upgrade calculation method will not be affected if the number of additional users from the current plan is less than or equal the number of default users in the new plan, the method is only affected if the number of additional users in the current plan is exceeding the number of default users in the new plan, in this case we need to add the result of: (additionalUsers - defaultUsers) * pricePerUser to our calculation
 ---
